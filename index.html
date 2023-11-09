@@ -12,7 +12,7 @@
     <div id="app">
         <div class="product">
             <div class="product-image">
-                <img v-bind:src="image" v-bind:alt="altText">
+                <img v-bind:src="image" >
             </div>
 
             <div class="product-info">
@@ -25,7 +25,7 @@
                 </ul>
 
                 <div v-for="variant in variants" :key="variant.variantId">
-                    <p> {{variant.variantColor }}</p>
+                    <p @mouseover="updateProduct(variant.variantImage)"> {{variant.variantColor }}</p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
             <p> Cart ({{cart}})</p>
         </div>
 
-        <button v-on:click="cart += 1"> Add to cart</button>
+        <button v-on:click="addToCart"> Add to cart</button>
     </div>
 </body>
 
