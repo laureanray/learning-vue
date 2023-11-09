@@ -1,7 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
-        image: "./variant-default.png",
+        image: "./variant-default.jpg",
         product: "Socks",
         inStock: true,
         details: ["80% cotton", "20% polyester", "Genter-neutral"],
